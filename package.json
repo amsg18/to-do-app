@@ -13,5 +13,10 @@
     "jwt"
   ],
   "author": "Ana Mª Soler Guijarro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.29.1"
+  }
 }
