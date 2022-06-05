@@ -12,7 +12,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
   constructor() {}
 
-  intercept(req: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     //Obtenemos el token del session storage
     const token= sessionStorage.getItem('token');
 

@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
-import {map} from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
-import {Task} from '../Task';
+import { Task } from '../Task';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
   apiRest = 'https://localhost:3000/api/tareas';
+  
   constructor(private http: HttpClient) { 
 }
-  getTasks(){
+  getTasks() {
     return this.http.get<Task[]>(`${this.apiRest}`)
         .pipe(map(res => res));
   }

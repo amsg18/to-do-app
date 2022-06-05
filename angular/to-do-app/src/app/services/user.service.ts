@@ -25,6 +25,6 @@ export class UserService {
    }
    getUser(){
      return this.http.get<any>(`${this.apiRest}/me`)
-     .pipe(map(res=>res));
+      .pipe(map(res=>res));
    }
 }

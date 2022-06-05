@@ -18,13 +18,13 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.login();
     this.userService.getUser().subscribe(
-      user => {this.displayName = user.nombre
-        console.log(user);
+      user => {this.displayName = user.usuario.nombre;
+        
       }); 
   }
 
   login(){
-    const user={email:this.email, password: this.password};
+    const user={email: this.email, password: this.password};
     
     this.userService.signIn(user).subscribe(
       (loggedUser)=> {
